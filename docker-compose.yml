@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  mysqldb:
+    build:
+      context: ./services/mysql
+      dockerfile: Dockerfile
+    ports:
+      - 3306:3306
+
+  metabase:
+    build:
+      context: ./services/metabase
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
